@@ -1,18 +1,19 @@
 #ifndef PID_H
 #define PID_H
-#include <vector>
+#include <string>
 
 // Tweendle State Machine state labels
-const int START    = 0;
-const int TOL0DP   = 1;
-const int TOL0_2DP = 2;
-const int TOL1DP   = 3;
-const int TOL1_2DP = 4;
-const int TOL2DP   = 5;
-const int END      = 6;
-const int ERROR    = 7;
-const int ERROR_UPDATE = 8;
-const int NONE     =  9;
+const int ERROR_INIT = 0;
+const int START      = 1;
+const int TOL0DP     = 2;
+const int TOL0_2DP   = 3;
+const int TOL1DP     = 4;
+const int TOL1_2DP   = 5;
+const int TOL2DP     = 6;
+const int END        = 7;
+const int ERROR      = 8;
+const int ERROR_UPDATE = 9;
+const int NONE       =  10;
 
 
 class PID {
@@ -65,8 +66,14 @@ public:
   * sets the number of runs, for estimating the current best error, default to 100
   */
   void setErrorRuns(int n);
-
+  std::string prt_state();
+  double prt_err();
+  double prt_besterr();
+  void exitErrorUpdateState();
+  int twdl_loops;
 private:
+
+
     double p[3];
     double dp[3];
 	double prevCte;
@@ -75,9 +82,10 @@ private:
 	int pid_i;
 	int twdl_state;
 	int transition_state;
-	int twdl_loops;
 
-std::string prt_lablel(int state);
+	int max_loops;
+	bool reset_max_loops;
+
 
 };
 
