@@ -58,7 +58,7 @@ Ki  0.004
 Kd  -0.662543
 Max_Speed 35
 ```
-
+These are st by defautr, so just type './pid '
 [PID Loop Video Download from here](https://github.com/QuantumCoherence/CarND-PID-Control-Project/blob/master/vokoscreen-2018-06-01_21-37-30.mkv.gz)
 
 **Images**
