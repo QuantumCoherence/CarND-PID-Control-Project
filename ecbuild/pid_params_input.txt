@@ -1,0 +1,12 @@
+Kp 0.258003
+Ki 0
+Kd 0
+dp[0] 0.0298431
+dp[1] 0.0109419
+dp[2] 0.0109419
+err 6.04827
+Best_err 1.41185
+State TOL0_2DP 3
+Next State NONE 11
+Resume State NONE 11
+ NONE 11
