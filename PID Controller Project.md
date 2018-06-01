@@ -130,3 +130,10 @@ What this means is the follwing:
 
 
 ### Coding Notes
+No throttle PID
+Tweedle State Machine coded in the pid class, that fully implements the whole tweedle algorithm.
+The pid binary accepts following optional parameters
+
+``-tweedle" `` triggeres the tweedle process
+
+
