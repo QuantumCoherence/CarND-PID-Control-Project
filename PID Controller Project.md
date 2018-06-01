@@ -48,7 +48,7 @@ The system on which this code was tested is close to ancient ... so it's likley 
 
 ### Video and Images
 
-**Video**
+**Vides**
 Download the videoscreen capture of an entire loop around the track in ziped form, gunzip and play.
 This is the outcome using following paramters 
 
@@ -58,7 +58,7 @@ Ki  0.004
 Kd  -0.662543
 Max_Speed 35
 ```
-These are st by defautr, so just type 
+These are set by default, so just type 
 ``./pid ``
 
 [PID Loop Video Download from here](https://github.com/QuantumCoherence/CarND-PID-Control-Project/blob/master/vokoscreen-2018-06-01_21-37-30.mkv.gz)
@@ -129,18 +129,25 @@ What this means is the follwing:
 
 
 
-### Coding Notes
+### Coding and usage Notes
 No throttle PID
 Tweedle State Machine coded in the pid class, that fully implements the whole tweedle algorithm.
 The pid binary accepts following optional parameters
 
 ``./pid -tweedle" `` 
 
-triggeres the tweedle process with starting values 0.1, 0.1, 0.1, sop when tol < 0.00001
+triggeres the tweedle process with starting values 0.1, 0.1, 0.1, It stops when tol < 0.00001
 
 ``./pid -tweedle -sp <float> -si <float> -sd <float> -mv <float>`` 
 
-start the pid controller with the specified p,, i, d and max_speed value mv
+start the pid controller with the specified p, i, d and max_speed -mv value
+
+``./pid ``
+
+triggers the pid controller with default parameters value as described above 
+
+
+
 
 
 
