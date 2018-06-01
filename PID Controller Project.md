@@ -21,15 +21,19 @@ Use the CMakeLists.txt in the repo root folder to create the make file and compi
 Control Parameters - Control in this context means SteerAngle control
 
 P - Proportional Control Response
+
 The larger the CTE error, that is the distance from the ideal trajectory, the stronger the steering response.
 
 D - Linear Response to the error change rate
+
 The faster the error change, the stronger the response. This error response helps dampening the overall response to a perturbation from the ideal trajectory, hence enhanicng stabilty and performance.
 
-I - Linear response to constant error, or to the infinite wave length component of a perturbation.
+I - Linear response to constant error, or to the infinite wave length component of a perturbation
+
 This error response eliminates any lingering bias from the desired set point. In this particular case it makes sure the final CTE error is zero (when no perturbations are present). This for instance helps eliminating steering bias or drift due to tire defects of real world vehicles.
 
 Performance
+
 If speed wasn't a factor, the above would work so well!
 The P parameter defines how fast the system responds to a perturbation. If the paramter is set to a too small value, a tight turn at moderate speed will cause the vehicle to overshoot and perhaps even go off the road.
 A higher value will keep the vehicle on the road in a tight turn, but will amplify the response to simple repeated perturbations on a straight trajectory. This is due to the frequency response inherent in the system. A correctly set P parameter will casue the system response to oscillate around the set point. 
