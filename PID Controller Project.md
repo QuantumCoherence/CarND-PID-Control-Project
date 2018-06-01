@@ -14,8 +14,6 @@ The build subfolder contains all the binaries and the makefile for compiling the
 Use the CMakeLists.txt in the repo root folder to create the make file and compile on your system.
 
 
-
-
 ### PID Project  Notes	
 
 ####Parameters and Performance
