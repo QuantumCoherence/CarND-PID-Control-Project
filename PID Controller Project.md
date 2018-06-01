@@ -130,8 +130,8 @@ What this means is the follwing:
 
 
 ### Coding and usage Notes
-No throttle PID
-Tweedle State Machine coded in the pid class, that fully implements the whole tweedle algorithm.
+No throttle PID was implemented as a simple algorithm was sufficient to control the speed effectively.
+A Tweedle State Machine was coded in the pid class, that fully implements the whole tweedle algorithm.
 The pid binary accepts following optional parameters
 
 ``./pid -tweedle" `` 
@@ -147,6 +147,9 @@ start the pid controller with the specified p, i, d and max_speed -mv value
 triggers the pid controller with default parameters value as described above 
 
 
+Comments in the code should be self explanatory . 
+
+Please note the Tweedle algorithm is simple but state machine implemented uses transition logic rather than topology to implements the tweedle logic.  
 
 
 
