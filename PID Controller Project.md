@@ -89,11 +89,11 @@ With a bit of heuristic, trial and error it is however possible to find a rough 
 The manual process is quite simple:
 
 ```
-1. Keep the speed low. // See Below
+1. Keep the speed low (see below)
 2. Set I and D to zero and make a guess for P
-2. If the car flies of the track, reduce P until the car tend to remain on the track on straight or slight turn trajectory.
+2. If the car flies of the track, reduce P until the car tends to remain on the track on straight or slightly turning trajectory.
 3. Add a negative value to D such that the vehicle can now stay on the track even for higher P values, that is for tighter turns, all while achieving some level of stability
-4. Once the car remains on the track indefinitely, even if with visible instability, pass the used parameters as starting to point to the the "pid" binary using the -tweedle opition on.
+4. Once the car remains on the track indefinitely, even if with visible instability, pass the guesstimated parameters as starting to point to the the "pid" binary using the -tweedle option on.
 ```
 
 
