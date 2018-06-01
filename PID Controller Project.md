@@ -16,7 +16,7 @@ Use the CMakeLists.txt in the repo root folder to create the make file and compi
 
 ### PID Project  Notes	
 
-####Parameters and Performance
+#### Parameters and Performance
 
 Control Parameters - Control in this context means SteerAngle control
 
@@ -38,11 +38,11 @@ The derivative response will dampen the initial response but optimally only for 
 Giving up on response time, that is on how tight a turn the system will handle without much overshooting, will get a more stable trajecotry, but will also limit the maximum speed the controller is able to handle without becoming unbounded.
 
 
-####Expected Performance on third party computers
+#### Expected Performance on third party computers
 Given the frequency response depends among others on the processing power of the computer system, it is well possible that the performance of this code, on  the test party system, might well be better or worse than displayed in the video below.
 The system on which this code was tested is close to ancient ... so it's likley that on a third party testing this code might perform better, meaning altering the max_speed with a higher value parameter will get a stable vehicle control response at faster speed than displayed here.
 
-####Video and Images
+#### Video and Images
 
 **Video**
 Download the videoscreen capture of an entire loop around the track in ziped form, gunzip and play.
