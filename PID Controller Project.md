@@ -135,8 +135,11 @@ Tweedle State Machine coded in the pid class, that fully implements the whole tw
 The pid binary accepts following optional parameters
 
 ``./pid -tweedle" `` 
+
 triggeres the tweedle process with starting values 0.1, 0.1, 0.1, sop when tol < 0.00001
+
 ``./pid -tweedle -sp <float> -si <float> -sd <float> -mv <float>`` 
+
 start the pid controller with the specified p,, i, d and max_speed value mv
 
 
