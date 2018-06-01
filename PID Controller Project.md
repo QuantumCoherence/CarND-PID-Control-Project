@@ -66,11 +66,10 @@ These are st by defautr, so just type
 **Images**
 The following images show two outoput screen captures of the Tweedle state machine process (see under Parameters Tuning and Coding Notes for details).
 The word "Reset" at the beginning of the line indicates that the car left the paved road and so the error estiamtion process was stopped, the simulator reset and the next step of the Tweedle algorhitmn processed.
-The word "Loop" instead indicates that the whole track was completed, hence the average error for the last loop estimated.
+The word "Loop" instead indicates that the whole track was completed.
+Each time a new lowest error is found, the best_error waiss updated and the next step of the Tweedle algorithm processed. In the end the progress is visible, even though very slow, given one loop requires aproximatley 600 simulation steps.
 
-Each time a new lowest error is foound, the best_error was updated and the next step of the Tweedle algorithm processed. In the end the progress is visible, even though very slow, given one loop require aproximatley 600 simulation steps.
-
-The images belowe show just a subest of the whole process.
+The images below show just a subset of the whole process.
 
 
 
