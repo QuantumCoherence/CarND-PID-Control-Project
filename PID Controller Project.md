@@ -53,10 +53,10 @@ Download the videoscreen capture of an entire loop around the track in ziped for
 This is the outcome using following paramters 
 
 ```
-> Kp  0.061751
-> Ki  0.004
-> Kd  -0.662543
-> Max_Speed 35
+Kp  0.061751
+Ki  0.004
+Kd  -0.662543
+Max_Speed 35
 ```
 
 [PID Loop Video Download from here](https://github.com/QuantumCoherence/CarND-PID-Control-Project/blob/master/vokoscreen-2018-06-01_21-37-30.mkv.gz)
@@ -103,10 +103,13 @@ I = 0
 D = -0.8
 
 The final values (not shown in the images) that were then coded as default settings for the compliled binary, were:
+
+```
 Kp  0.061751
 Ki  0.004
 Kd  -0.662543
 Max_Speed 35
+```
 
 *Estimation and control of the speed*
 
