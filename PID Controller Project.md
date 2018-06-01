@@ -67,7 +67,7 @@ These are st by defautr, so just type
 The following images show two outoput screen captures of the Tweedle state machine process (see under Parameters Tuning and Coding Notes for details).
 The word "Reset" at the beginning of the line indicates that the car left the paved road and so the error estiamtion process was stopped, the simulator reset and the next step of the Tweedle algorhitmn processed.
 The word "Loop" instead indicates that the whole track was completed.
-Each time a new lowest error is found, the best_error waiss updated and the next step of the Tweedle algorithm processed. In the end the progress is visible, even though very slow, given one loop requires aproximatley 600 simulation steps.
+Each time a new lowest error was found, the best_error was updated and the next step of the Tweedle algorithm processed. In the end the progress is visible, even though very slow, given one loop requires aproximatley 600 simulation steps.
 
 The images below show just a subset of the whole process.
 
@@ -80,19 +80,21 @@ The images below show just a subset of the whole process.
 ![Tweedle Process Output sample 2](https://github.com/QuantumCoherence/CarND-PID-Control-Project/blob/master/Tweedle%20Output2.jpg?raw=true)
 
 ### Speed and Paramter Tuning
-A fully functional Tweedle state machine was implemented that can perform the tweedle algorithm to estimate the optimal PID paramter values. The state machine automatically resets the simulator, whenever the vehicle goes off the paved road or simply hits the curb on either side of the track.
+A fully functional Tweedle state machine was implemented that can perform the tweedle algorithm to estimate the optimal PID paramter values. The state machine automatically resets the simulator, whenever the vehicle goes off the paved road or simply hits the top of the curb on either side of the track.
 
-The optional input "-tweedle" to the "pid" binary, will start the tuning process with the starting values 0.1, 0.1 , 0.1 resp for P, I and D. However, this process is exceedingly long, because at the outstart most parameter values combianiton will lead to certain crashes and so many resets are necessary to move forward with the estimation.
+The optional input "-tweedle" to the "pid" binary, will start the tuning process with the starting values 0.1, 0.1 , 0.1 resp. for P, I and D. However, this process is exceedingly long, because at the outstart most parameter values combianiton will lead to crashes and many resets are necessary to move forward with the estimation.
 
-With a bit of heuristic, trial and error it is however possible to find a rough guess of a good starting point, for the three paramters such that the vehicle will remain on the track and the algorithm find an optimal configuration in a much shorter number of steps.
+With a bit of heuristic, trial and error it is however possible to find a rough guess numerically quite close to a good starting point for all the parameters, such that the vehicle will remain on the track most of the time and the algorithm will find an optimal configuration in a much shorter number of iterations.
 
-The manual process if quite simple:
+The manual process is quite simple:
 
+```
 1. Keep the speed low. // See Below
 2. Set I and D to zero and make a guess for P
 2. If the car flies of the track, reduce P until the car tend to remain on the track on straight or slight turn trajectory.
 3. Add a negative value to D such that the vehicle can now stay on the track even for higher P values, that is for tighter turns, all while achieving some level of stability
 4. Once the car remains on the track indefinitely, even if with visible instability, pass the used parameters as starting to point to the the "pid" binary using the -tweedle opition on.
+```
 
 
 Using these paramters the Tweedle state machine can then relativley quickly find optimal P, I and D paramter values, in aproximately several 100s steps. Yes, it remains quite long even after a rough intial manual estiamtion, but comperatively much much shorter,than without using manually estimated initial values.
