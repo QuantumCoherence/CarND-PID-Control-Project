@@ -1,6 +1,6 @@
 # PID Controller Project
 ## GitHub Repo
-[CarND-Controller-Project-Project](https://github.com/QuantumCoherence/CarND-PID-Control-Project)
+[CarND-PID-Controller-Project](https://github.com/QuantumCoherence/CarND-PID-Control-Project)
 
 
 This project was completed on Ubuntu 16.04.
