@@ -149,7 +149,11 @@ triggers the pid controller with default parameters value as described above
 
 Comments in the code should be self explanatory . 
 
-Please note the Tweedle algorithm is simple but state machine implemented uses transition logic rather than topology to implements the tweedle logic.  
+Please note despite the Tweedle algorithm being simple, the state machine implementing it instead isn't. As the algorithm gets spread out among states, reading and following the tweedle logic in the code, becomes counterintuitive. To make things more complicated,this particular state machine was implemented using transtional logic rather than topology only as state transition criteria. This makes the number of used states smaller at the expanse of code readability.  
+The reason a state machine was used is because of the need to transfer control between the tweedle algorithm logic and the simulator. State transition logic is a natural representaton of such problems and has the advantage of retaining the latest state even when the connection with the simulator was to be lost half way during the parameters estimation process.   
+Being able to restart the process without problems is a signficant advantge and therefore the state machine was implemented. 
+As the tweedle state machine code is however outside the scope of the project, no detailed comments or documentation are made available.
+
 
 
 
