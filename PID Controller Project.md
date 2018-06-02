@@ -3,7 +3,7 @@
 [CarND-PID-Controller-Project](https://github.com/QuantumCoherence/CarND-PID-Control-Project)
 
 
-This project was completed on Ubuntu 16.04. \phi
+This project was completed on Ubuntu 16.04. 
 
 For both github repo links, the ecbuild subfolder contains all ECLIPSE project files, including compiled binary.
 
